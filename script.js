@@ -100,32 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Intersection Observer for fade-in animations
-    const observeElements = document.querySelectorAll('.feature-card, .product-card, .gallery-item');
-    
-    // Add initial styles for hidden elements if JS is enabled
-    observeElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
-
-    const observerOption = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const elementObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOption);
-
-    observeElements.forEach(el => {
-        elementObserver.observe(el);
-    });
+    // Javascript fade animations were removed 
+    // to guarantee 100% visibility on all mobile and desktop browsers.
 });
