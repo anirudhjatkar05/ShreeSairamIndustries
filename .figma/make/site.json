@@ -1,0 +1,10 @@
+{
+  "description": "Showcases premium door manufacturing with elegant design, detailed product info, gallery, catalog downloads, and easy contact for customers.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
